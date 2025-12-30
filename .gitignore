@@ -1,11 +1,13 @@
-# CLion / IDE
-.idea/
-cmake-build-*/
-
 # Binários
-main
 a.out
 *.out
+main
+exercicios/**/*
+!exercicios/**/*.c
 
 # Objetos
 *.o
+
+# CLion
+.idea/
+cmake-build-*/

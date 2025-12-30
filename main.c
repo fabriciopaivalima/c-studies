@@ -1,13 +1,21 @@
 #include <stdio.h>
-
-#define DIM 3
+#include <stdlib.h>
+#include <time.h>
+#include <inttypes.h>
 
 
 int main(void)
 {
-    int v[3][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
 
-    printf("%d\n", v[1][1]);
+    time_t seed;
+    seed = time(NULL);
+    srand((unsigned)seed);
+
+    intmax_t valor = rand() % (20 - 10 +  1) + 10;
+
+    printf("%jd\n", valor);
+
 
     return 0;
+
 }
